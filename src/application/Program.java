@@ -33,10 +33,12 @@ public class Program {
         Seller newSeller = new Seller(null, "Fernando Sardinha", "sardinha@bol.com", new Date(), 4000.0, department);
         sellerDao.insert(newSeller);
         System.out.println("Inserted! New id = " + newSeller.getId());
+
         System.out.println("\n=== test5: seller update ====");
         seller = sellerDao.findById(1);
         seller.setEmail("renatocariani@bol.com.br");
         sellerDao.update(seller);
+
         System.out.println("\n=== test6: seller delete ====");
         System.out.println("Enter id for delete test: ");
         int id = sc.nextInt();
